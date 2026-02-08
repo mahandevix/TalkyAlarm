@@ -1,0 +1,12 @@
+.DS_Store
+
+# Xcode local/build artifacts
+DerivedData/
+DerivedDataRelease/
+build/
+*.xcresult
+
+# User-specific Xcode data
+xcuserdata/
+*.xcuserstate
+

@@ -1,0 +1,3 @@
+"NSUserNotificationUsageDescription" = "Talky Alarm sends alerts for your alarms.";
+"NSMicrophoneUsageDescription" = "Talky Alarm records custom voice alarm messages.";
+"NSAppleMusicUsageDescription" = "Talky Alarm may play selected sounds for alarms.";

@@ -1,0 +1,3 @@
+"NSUserNotificationUsageDescription" = "يرسل Talky Alarm تنبيهات لمنبّهاتك.";
+"NSMicrophoneUsageDescription" = "يسجّل Talky Alarm رسائل صوتية مخصصة للمنبّهات.";
+"NSAppleMusicUsageDescription" = "قد يشغّل Talky Alarm أصواتًا محددة للمنبّهات.";

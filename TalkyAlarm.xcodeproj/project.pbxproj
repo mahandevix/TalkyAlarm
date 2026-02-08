@@ -1,0 +1,500 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		083B5662AF5F21A5007D567E /* DiagnosticsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8BC0AE7E27AF6AFBEEA472 /* DiagnosticsSheet.swift */; };
+		0AD49CB6D326F9EC545F33D4 /* SubscriptionTier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2465E737BCC7B358B77E377 /* SubscriptionTier.swift */; };
+		0DA9B0C1456BD011EC05D930 /* AudioRecorderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5F1A5CEAE2F45FA50E173C /* AudioRecorderService.swift */; };
+		0F120045259362E25A9B00A0 /* AlarmRepeatRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D3DEF960FD11D1DFD2ED54 /* AlarmRepeatRule.swift */; };
+		1CE19CCA254F36DAFAABF3A0 /* AlarmVoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307E2EFC6652BC7E1612BCBD /* AlarmVoice.swift */; };
+		244F107CE4A030A6A11D3D32 /* PaywallSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EAE7D0CA9B4E3AB092B0B /* PaywallSheet.swift */; };
+		2C1803ADD005D48F3BA63917 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64541B9275F619D9BD3B39AF /* L10n.swift */; };
+		2CCB700A2B76382993C82FDC /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC053E98E332713E54DC284 /* SubscriptionService.swift */; };
+		301D12718C2CBB9BC4AB85C5 /* SpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058376578D1A33B4F17E0763 /* SpeechService.swift */; };
+		4BF02AFE9CB75A87D91B1CF7 /* AlarmListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF0DF57120867B2CBF4BC05 /* AlarmListViewModel.swift */; };
+		6C94ECB23F923DD98DE664F2 /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4719963237FD15537381252C /* NotificationScheduler.swift */; };
+		7C075D13058A19DFC4DB2CF3 /* NotificationSchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECE5CABC7FE5DC5565F1B64 /* NotificationSchedulerTests.swift */; };
+		A6956DC2FA162F03F72FC3D9 /* AlarmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9795152B740B6F89F65C32BD /* AlarmStore.swift */; };
+		C5402F6167BBBC85ED40ACC5 /* AlarmEditorSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4E105FB0204608083E1217 /* AlarmEditorSheet.swift */; };
+		D3E3720C4893490F37009A2A /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E23A0F34A3B6279642512AF /* Alarm.swift */; };
+		EEE51CFD503F9FD17D8F3C76 /* TalkyAlarmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8CD3E7EE4B940DAD1A3B46 /* TalkyAlarmApp.swift */; };
+		F359EFBC3EF67822AB99587D /* AlarmListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32589C65C0097C1EC6B84BE2 /* AlarmListView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		09D5C8335D99D8EF2959A57C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4B94960FF84D40B4BB5A0A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F43B83D91CA83B838B31E242;
+			remoteInfo = TalkyAlarm;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		058376578D1A33B4F17E0763 /* SpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechService.swift; sourceTree = "<group>"; };
+		307E2EFC6652BC7E1612BCBD /* AlarmVoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmVoice.swift; sourceTree = "<group>"; };
+		32589C65C0097C1EC6B84BE2 /* AlarmListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmListView.swift; sourceTree = "<group>"; };
+		3DBF397389AFC18B22990A8D /* TalkyAlarm.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = TalkyAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4719963237FD15537381252C /* NotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScheduler.swift; sourceTree = "<group>"; };
+		64541B9275F619D9BD3B39AF /* L10n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
+		6E23A0F34A3B6279642512AF /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		837EAE7D0CA9B4E3AB092B0B /* PaywallSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallSheet.swift; sourceTree = "<group>"; };
+		863D4CC172A1DDB13E5BD885 /* TalkyAlarmTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = TalkyAlarmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F5F1A5CEAE2F45FA50E173C /* AudioRecorderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderService.swift; sourceTree = "<group>"; };
+		9795152B740B6F89F65C32BD /* AlarmStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmStore.swift; sourceTree = "<group>"; };
+		AB8CD3E7EE4B940DAD1A3B46 /* TalkyAlarmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkyAlarmApp.swift; sourceTree = "<group>"; };
+		B2465E737BCC7B358B77E377 /* SubscriptionTier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionTier.swift; sourceTree = "<group>"; };
+		BA8BC0AE7E27AF6AFBEEA472 /* DiagnosticsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticsSheet.swift; sourceTree = "<group>"; };
+		CCC053E98E332713E54DC284 /* SubscriptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionService.swift; sourceTree = "<group>"; };
+		E5D3DEF960FD11D1DFD2ED54 /* AlarmRepeatRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRepeatRule.swift; sourceTree = "<group>"; };
+		EF4E105FB0204608083E1217 /* AlarmEditorSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmEditorSheet.swift; sourceTree = "<group>"; };
+		FBF0DF57120867B2CBF4BC05 /* AlarmListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmListViewModel.swift; sourceTree = "<group>"; };
+		FECE5CABC7FE5DC5565F1B64 /* NotificationSchedulerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSchedulerTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0BB8F91F4B1BEAABB5A6388D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FBF0DF57120867B2CBF4BC05 /* AlarmListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		273F66765565E6E7F0DE9930 /* TalkyAlarmTests */ = {
+			isa = PBXGroup;
+			children = (
+				FECE5CABC7FE5DC5565F1B64 /* NotificationSchedulerTests.swift */,
+			);
+			path = TalkyAlarmTests;
+			sourceTree = "<group>";
+		};
+		486179996D542DA72CF95263 = {
+			isa = PBXGroup;
+			children = (
+				DE06646A2EEE2450AE0E00B4 /* Sources */,
+				273F66765565E6E7F0DE9930 /* TalkyAlarmTests */,
+				5B2C1BA2D447990328C70F56 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5B2C1BA2D447990328C70F56 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF397389AFC18B22990A8D /* TalkyAlarm.app */,
+				863D4CC172A1DDB13E5BD885 /* TalkyAlarmTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78527CFD3C02CD3B93A44938 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9795152B740B6F89F65C32BD /* AlarmStore.swift */,
+				8F5F1A5CEAE2F45FA50E173C /* AudioRecorderService.swift */,
+				4719963237FD15537381252C /* NotificationScheduler.swift */,
+				058376578D1A33B4F17E0763 /* SpeechService.swift */,
+				CCC053E98E332713E54DC284 /* SubscriptionService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A95C44318EFE6202315B0534 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EF4E105FB0204608083E1217 /* AlarmEditorSheet.swift */,
+				32589C65C0097C1EC6B84BE2 /* AlarmListView.swift */,
+				BA8BC0AE7E27AF6AFBEEA472 /* DiagnosticsSheet.swift */,
+				837EAE7D0CA9B4E3AB092B0B /* PaywallSheet.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D84029CE522E477705F172D8 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				64541B9275F619D9BD3B39AF /* L10n.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		DE06646A2EEE2450AE0E00B4 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AB8CD3E7EE4B940DAD1A3B46 /* TalkyAlarmApp.swift */,
+				D84029CE522E477705F172D8 /* Localization */,
+				EF415406B1B53BCB0616B59D /* Models */,
+				78527CFD3C02CD3B93A44938 /* Services */,
+				0BB8F91F4B1BEAABB5A6388D /* ViewModels */,
+				A95C44318EFE6202315B0534 /* Views */,
+			);
+			name = Sources;
+			path = TalkyAlarm/Sources;
+			sourceTree = "<group>";
+		};
+		EF415406B1B53BCB0616B59D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6E23A0F34A3B6279642512AF /* Alarm.swift */,
+				E5D3DEF960FD11D1DFD2ED54 /* AlarmRepeatRule.swift */,
+				307E2EFC6652BC7E1612BCBD /* AlarmVoice.swift */,
+				B2465E737BCC7B358B77E377 /* SubscriptionTier.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		20C1C08B068EE9A8E5C78A0F /* TalkyAlarmTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19A8A6AEDF27C051601FA3F4 /* Build configuration list for PBXNativeTarget "TalkyAlarmTests" */;
+			buildPhases = (
+				7C8BBE01DD9D94747C437983 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A32875C7225E02FC095B160F /* PBXTargetDependency */,
+			);
+			name = TalkyAlarmTests;
+			packageProductDependencies = (
+			);
+			productName = TalkyAlarmTests;
+			productReference = 863D4CC172A1DDB13E5BD885 /* TalkyAlarmTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F43B83D91CA83B838B31E242 /* TalkyAlarm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16411D2CB23D92A5DD31EEA8 /* Build configuration list for PBXNativeTarget "TalkyAlarm" */;
+			buildPhases = (
+				8E6360B9F434075996274EF3 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TalkyAlarm;
+			packageProductDependencies = (
+			);
+			productName = TalkyAlarm;
+			productReference = 3DBF397389AFC18B22990A8D /* TalkyAlarm.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4B94960FF84D40B4BB5A0A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+			};
+			buildConfigurationList = 0159602ED1C1A8C894B533FC /* Build configuration list for PBXProject "TalkyAlarm" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 486179996D542DA72CF95263;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F43B83D91CA83B838B31E242 /* TalkyAlarm */,
+				20C1C08B068EE9A8E5C78A0F /* TalkyAlarmTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7C8BBE01DD9D94747C437983 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C075D13058A19DFC4DB2CF3 /* NotificationSchedulerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E6360B9F434075996274EF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3E3720C4893490F37009A2A /* Alarm.swift in Sources */,
+				C5402F6167BBBC85ED40ACC5 /* AlarmEditorSheet.swift in Sources */,
+				F359EFBC3EF67822AB99587D /* AlarmListView.swift in Sources */,
+				4BF02AFE9CB75A87D91B1CF7 /* AlarmListViewModel.swift in Sources */,
+				0F120045259362E25A9B00A0 /* AlarmRepeatRule.swift in Sources */,
+				A6956DC2FA162F03F72FC3D9 /* AlarmStore.swift in Sources */,
+				1CE19CCA254F36DAFAABF3A0 /* AlarmVoice.swift in Sources */,
+				0DA9B0C1456BD011EC05D930 /* AudioRecorderService.swift in Sources */,
+				083B5662AF5F21A5007D567E /* DiagnosticsSheet.swift in Sources */,
+				2C1803ADD005D48F3BA63917 /* L10n.swift in Sources */,
+				6C94ECB23F923DD98DE664F2 /* NotificationScheduler.swift in Sources */,
+				244F107CE4A030A6A11D3D32 /* PaywallSheet.swift in Sources */,
+				301D12718C2CBB9BC4AB85C5 /* SpeechService.swift in Sources */,
+				2CCB700A2B76382993C82FDC /* SubscriptionService.swift in Sources */,
+				0AD49CB6D326F9EC545F33D4 /* SubscriptionTier.swift in Sources */,
+				EEE51CFD503F9FD17D8F3C76 /* TalkyAlarmApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A32875C7225E02FC095B160F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F43B83D91CA83B838B31E242 /* TalkyAlarm */;
+			targetProxy = 09D5C8335D99D8EF2959A57C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0B9B2E1D4C55671D30DFFBF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		256F169702BEF9AB1EB1DBAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.barmanstu.TalkyAlarmTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TalkyAlarm.app/TalkyAlarm";
+			};
+			name = Debug;
+		};
+		B309F8CF43742357A07AE71E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Talky Alarm";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Talky Alarm may play selected sounds for alarms.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Talky Alarm records custom voice alarm messages.";
+				INFOPLIST_KEY_NSUserNotificationUsageDescription = "Talky Alarm sends alerts for your alarms.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIBackgroundModes = (
+					audio,
+				);
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.barmanstu.talkyalarm;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		B8D3E0A01C39C7CB1B056798 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		E6B95D944D762002E3A7D84C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Talky Alarm";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Talky Alarm may play selected sounds for alarms.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Talky Alarm records custom voice alarm messages.";
+				INFOPLIST_KEY_NSUserNotificationUsageDescription = "Talky Alarm sends alerts for your alarms.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIBackgroundModes = (
+					audio,
+				);
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.barmanstu.talkyalarm;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		EBC9AB4C02A625403A600013 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.barmanstu.TalkyAlarmTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TalkyAlarm.app/TalkyAlarm";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0159602ED1C1A8C894B533FC /* Build configuration list for PBXProject "TalkyAlarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8D3E0A01C39C7CB1B056798 /* Debug */,
+				0B9B2E1D4C55671D30DFFBF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		16411D2CB23D92A5DD31EEA8 /* Build configuration list for PBXNativeTarget "TalkyAlarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6B95D944D762002E3A7D84C /* Debug */,
+				B309F8CF43742357A07AE71E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		19A8A6AEDF27C051601FA3F4 /* Build configuration list for PBXNativeTarget "TalkyAlarmTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				256F169702BEF9AB1EB1DBAE /* Debug */,
+				EBC9AB4C02A625403A600013 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4B94960FF84D40B4BB5A0A8 /* Project object */;
+}

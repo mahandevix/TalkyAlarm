@@ -1,0 +1,41 @@
+name: TalkyAlarm
+options:
+  bundleIdPrefix: com.barmanstu
+  deploymentTarget:
+    iOS: 18.0
+settings:
+  base:
+    SWIFT_VERSION: 6.0
+    CURRENT_PROJECT_VERSION: 1
+    MARKETING_VERSION: 1.0.0
+targets:
+  TalkyAlarm:
+    type: application
+    platform: iOS
+    sources:
+      - path: TalkyAlarm/Sources
+    resources:
+      - path: TalkyAlarm/Resources
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.barmanstu.talkyalarm
+        INFOPLIST_KEY_CFBundleDisplayName: Talky Alarm
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UIBackgroundModes:
+          - audio
+        INFOPLIST_KEY_NSUserNotificationUsageDescription: Talky Alarm sends alerts for your alarms.
+        INFOPLIST_KEY_NSMicrophoneUsageDescription: Talky Alarm records custom voice alarm messages.
+        INFOPLIST_KEY_NSAppleMusicUsageDescription: Talky Alarm may play selected sounds for alarms.
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+        TARGETED_DEVICE_FAMILY: 1
+    scheme:
+      testTargets:
+        - TalkyAlarmTests
+  TalkyAlarmTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: TalkyAlarmTests
+    dependencies:
+      - target: TalkyAlarm
