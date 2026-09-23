@@ -12,6 +12,8 @@ struct Alarm: Identifiable, Codable, Hashable {
     var message: String
     var recordingFileName: String?
     var createdAt: Date
+    var challenge: PhysicalChallenge?
+    var challengeTarget: Int
 
     init(
         id: UUID = UUID(),
@@ -24,7 +26,9 @@ struct Alarm: Identifiable, Codable, Hashable {
         voice: AlarmVoice = .basicTTS,
         message: String,
         recordingFileName: String? = nil,
-        createdAt: Date = .now
+        createdAt: Date = .now,
+        challenge: PhysicalChallenge? = nil,
+        challengeTarget: Int = 10
     ) {
         self.id = id
         self.title = title
@@ -37,6 +41,8 @@ struct Alarm: Identifiable, Codable, Hashable {
         self.message = message
         self.recordingFileName = recordingFileName
         self.createdAt = createdAt
+        self.challenge = challenge
+        self.challengeTarget = challengeTarget
     }
 
     var timeLabel: String {

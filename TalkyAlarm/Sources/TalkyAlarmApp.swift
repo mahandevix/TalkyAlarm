@@ -84,7 +84,12 @@ private final class NotificationRuntimeCoordinator: NSObject, UNUserNotification
         }
 
         Task { @MainActor in
-            sharedAlarmPlaybackService.play(alarm: alarm, recordingsDirectory: Self.recordingsDirectory)
+            // Check if alarm has a challenge - if so, show challenge view instead of playing immediately
+            if alarm.challenge != nil {
+                sharedAlarmPlaybackService.playWithChallenge(alarm: alarm, recordingsDirectory: Self.recordingsDirectory)
+            } else {
+                sharedAlarmPlaybackService.play(alarm: alarm, recordingsDirectory: Self.recordingsDirectory)
+            }
         }
 
         if case .everyXHours = alarm.repeatRule {

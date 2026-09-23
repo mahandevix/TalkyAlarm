@@ -121,3 +121,63 @@
 "paywall.local_test.yearly_price" = "€19.99 (Test)";
 "paywall.local_test.reset" = "Reset local Pro access";
 "paywall.local_test.reset_done" = "Local Pro access reset.";
+
+// Physical Challenges
+"challenge.title" = "Complete Challenge";
+"challenge.complete" = "Complete";
+"challenge.complete_title" = "Challenge Complete!";
+"challenge.complete_message" = "Great job! Your alarm is now dismissed.";
+"challenge.keep_going" = "Keep Going";
+"challenge.none" = "None";
+"challenge.push_ups" = "Push-Ups";
+"challenge.squats" = "Squats";
+"challenge.plank" = "Plank";
+"challenge.push_ups_description" = "Do push-ups to dismiss your alarm";
+"challenge.squats_description" = "Do squats to dismiss your alarm";
+"challenge.plank_description" = "Hold plank position to dismiss your alarm";
+"challenge.unit_reps" = "reps";
+"challenge.unit_seconds" = "seconds";
+"challenge.plank_progress" = "%d seconds";
+"challenge.progress" = "%d / %d";
+"challenge.target_reps" = "Target: %d reps";
+"challenge.target_seconds" = "Target: %d seconds";
+"challenge.target_label" = "Target: %d %@";
+"challenge.instructions.title" = "How to do it:";
+"challenge.push_ups_instruction_1" = "Place hands shoulder-width apart";
+"challenge.push_ups_instruction_2" = "Lower your chest to the ground";
+"challenge.push_ups_instruction_3" = "Push back up to starting position";
+"challenge.squats_instruction_1" = "Stand with feet shoulder-width apart";
+"challenge.squats_instruction_2" = "Lower your hips back and down";
+"challenge.squats_instruction_3" = "Return to standing position";
+"challenge.plank_instruction_1" = "Get into push-up position";
+"challenge.plank_instruction_2" = "Rest on your forearms";
+"challenge.plank_instruction_3" = "Keep your body in a straight line";
+
+// Motivational Sounds
+"sound.category.nature" = "Nature";
+"sound.category.motivational" = "Motivational";
+"sound.ocean_waves" = "Ocean Waves";
+"sound.rain" = "Rain";
+"sound.birds" = "Birds";
+"sound.forest" = "Forest";
+"sound.sunrise" = "Sunrise";
+"sound.wake_up_and_shine" = "Wake Up and Shine";
+"sound.today_is_your_day" = "Today Is Your Day";
+"sound.rise_and_grind" = "Rise and Grind";
+"sound.make_it_happen" = "Make It Happen";
+"sound.you_got_this" = "You Got This";
+"sound.sentence.ocean_waves" = "Wake up to the sound of ocean waves.";
+"sound.sentence.rain" = "Wake up to the sound of gentle rain.";
+"sound.sentence.birds" = "Wake up to the sound of birds singing.";
+"sound.sentence.forest" = "Wake up to the sound of a peaceful forest.";
+"sound.sentence.sunrise" = "Wake up to the sound of a beautiful sunrise.";
+"sound.sentence.wake_up_and_shine" = "Wake up and shine! It's a brand new day.";
+"sound.sentence.today_is_your_day" = "Today is your day. Make it amazing!";
+"sound.sentence.rise_and_grind" = "Rise and grind. Time to make things happen.";
+"sound.sentence.make_it_happen" = "Make it happen. Today is the day.";
+"sound.sentence.you_got_this" = "You got this! Let's go!";
+
+// Alarm Editor - Challenge Section
+"alarm.editor.section.challenge" = "Physical Challenge";
+"alarm.editor.challenge_type" = "Challenge Type";
+"alarm.editor.challenge_subtitle" = "Complete to dismiss alarm";

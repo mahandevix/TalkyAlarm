@@ -1,47 +1,80 @@
 import SwiftUI
 
+/// Main alarm list view with Vibe design system styling
 struct AlarmListView: View {
     @ObservedObject var viewModel: AlarmListViewModel
     @State private var isDiagnosticsPresented = false
 
     var body: some View {
         NavigationStack {
-            Group {
-                if viewModel.alarms.isEmpty {
-                    ContentUnavailableView(
-                        L10n.tr("alarm.list.empty.title"),
-                        systemImage: "alarm",
-                        description: Text(L10n.tr("alarm.list.empty.description"))
-                    )
-                } else {
-                    List {
-                        ForEach(viewModel.alarms) { alarm in
-                            AlarmRow(
-                                alarm: alarm,
-                                onToggle: { isOn in
-                                    viewModel.setEnabled(isOn, for: alarm)
-                                },
-                                onEdit: {
-                                    viewModel.editAlarmTapped(alarm)
+            ScrollView {
+                VStack(spacing: VibeSpacing.md) {
+                    // Header
+                    VStack(alignment: .leading, spacing: VibeSpacing.xs) {
+                        Text(L10n.tr("app.name"))
+                            .font(VibeFont.largeTitle)
+                            .foregroundStyle(VibeColor.textPrimary)
+                            .padding(.leading, VibeSpacing.lg)
+
+                        if viewModel.alarms.isEmpty {
+                            VibeCard {
+                                VStack(spacing: VibeSpacing.md) {
+                                    Image(systemName: "alarm")
+                                        .font(.system(size: 48))
+                                        .foregroundStyle(VibeColor.accent.opacity(0.5))
+
+                                    Text(L10n.tr("alarm.list.empty.title"))
+                                        .font(VibeFont.title2)
+                                        .foregroundStyle(VibeColor.textPrimary)
+
+                                    Text(L10n.tr("alarm.list.empty.description"))
+                                        .font(VibeFont.body)
+                                        .foregroundStyle(VibeColor.textSecondary)
+                                        .multilineTextAlignment(.center)
                                 }
-                            )
-                            .listRowInsets(EdgeInsets(top: 12, leading: 16, bottom: 12, trailing: 16))
-                        }
-                        .onDelete { indexSet in
-                            for index in indexSet {
-                                viewModel.deleteAlarm(viewModel.alarms[index])
+                                .frame(maxWidth: .infinity)
+                                .padding(VibeSpacing.xl)
                             }
+                            .padding(.horizontal, VibeSpacing.lg)
                         }
                     }
-                    .listStyle(.insetGrouped)
+
+                    // Alarm List
+                    if !viewModel.alarms.isEmpty {
+                        VStack(spacing: VibeSpacing.md) {
+                            ForEach(viewModel.alarms) { alarm in
+                                AlarmRow(
+                                    alarm: alarm,
+                                    onToggle: { isOn in
+                                        viewModel.setEnabled(isOn, for: alarm)
+                                    },
+                                    onEdit: {
+                                        viewModel.editAlarmTapped(alarm)
+                                    }
+                                )
+                            }
+                            .onDelete { indexSet in
+                                for index in indexSet {
+                                    viewModel.deleteAlarm(viewModel.alarms[index])
+                                }
+                            }
+                        }
+                        .padding(.horizontal, VibeSpacing.lg)
+                    }
+
+                    Spacer()
                 }
             }
-            .navigationTitle(L10n.tr("app.name"))
+            .background(VibeColor.background)
+            .navigationTitle("")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     if viewModel.tier == .free {
-                        Button(L10n.tr("common.upgrade")) {
+                        Button {
                             viewModel.showPaywall(reason: L10n.tr("paywall.reason.unlock_features"))
+                        } label: {
+                            VibeBadge(L10n.tr("common.upgrade"))
                         }
                     }
                 }
@@ -49,67 +82,80 @@ struct AlarmListView: View {
                     Button {
                         isDiagnosticsPresented = true
                     } label: {
-                        Label(L10n.tr("diagnostics.open"), systemImage: "stethoscope")
+                        Image(systemName: "stethoscope")
+                            .foregroundStyle(VibeColor.accent)
                     }
                 }
             }
             .safeAreaInset(edge: .bottom) {
-                Button {
-                    viewModel.addAlarmTapped()
-                } label: {
-                    Label(L10n.tr("alarm.add"), systemImage: "plus.circle.fill")
-                        .font(.headline)
+                VibeCard(padding: EdgeInsets(top: VibeSpacing.md, leading: VibeSpacing.lg, bottom: VibeSpacing.md, trailing: VibeSpacing.lg)) {
+                    Button {
+                        viewModel.addAlarmTapped()
+                    } label: {
+                        HStack(spacing: VibeSpacing.sm) {
+                            Image(systemName: "plus.circle.fill")
+                            Text(L10n.tr("alarm.add"))
+                        }
+                        .font(VibeFont.headline)
                         .frame(maxWidth: .infinity)
-                        .padding(.vertical, 14)
+                    }
+                    .vibePrimaryButton()
                 }
-                .buttonStyle(.borderedProminent)
-                .padding(.horizontal, 16)
-                .padding(.top, 8)
-                .padding(.bottom, 12)
-                .background(.ultraThinMaterial)
+                .padding(.bottom, VibeSpacing.md)
             }
             .sheet(item: $viewModel.activeSheet) { sheet in
                 switch sheet {
                 case .editor(let alarm):
-                    AlarmEditorSheet(
-                        existingAlarm: alarm,
-                        tier: viewModel.tier,
-                        recorderService: viewModel.recorderService,
-                        onPreview: { viewModel.previewVoice(for: $0) },
-                        onRequirePro: { reason in viewModel.showPaywall(reason: reason) },
-                        onSave: { alarm in
-                            viewModel.saveAlarm(alarm)
-                            viewModel.closeSheet()
-                        },
-                        onCancel: {
-                            viewModel.closeSheet()
-                        }
-                    )
+                    NavigationStack {
+                        AlarmEditorSheet(
+                            existingAlarm: alarm,
+                            tier: viewModel.tier,
+                            recorderService: viewModel.recorderService,
+                            onPreview: { viewModel.previewVoice(for: $0) },
+                            onRequirePro: { reason in viewModel.showPaywall(reason: reason) },
+                            onSave: { alarm in
+                                viewModel.saveAlarm(alarm)
+                                viewModel.closeSheet()
+                            },
+                            onCancel: {
+                                viewModel.closeSheet()
+                            }
+                        )
+                        .background(VibeColor.background)
+                    }
                     .presentationDetents([.medium, .large])
 
                 case .paywall(let reason):
-                    PaywallSheet(
-                        reason: reason,
-                        subscriptionService: viewModel.subscriptionService,
-                        onClose: {
-                            viewModel.closeSheet()
-                        }
-                    )
+                    NavigationStack {
+                        PaywallSheet(
+                            reason: reason,
+                            subscriptionService: viewModel.subscriptionService,
+                            onClose: {
+                                viewModel.closeSheet()
+                            }
+                        )
+                        .background(VibeColor.background)
+                    }
                     .presentationDetents([.medium])
                 }
             }
             .sheet(isPresented: $isDiagnosticsPresented) {
-                DiagnosticsSheet(
-                    viewModel: viewModel,
-                    onClose: {
-                        isDiagnosticsPresented = false
-                    }
-                )
+                NavigationStack {
+                    DiagnosticsSheet(
+                        viewModel: viewModel,
+                        onClose: {
+                            isDiagnosticsPresented = false
+                        }
+                    )
+                    .background(VibeColor.background)
+                }
                 .presentationDetents([.large])
             }
         }
     }
 }
+
+// MARK: - Alarm Row Component
 
 private struct AlarmRow: View {
     let alarm: Alarm
@@ -118,31 +164,48 @@ private struct AlarmRow: View {
 
     var body: some View {
         Button(action: onEdit) {
-            HStack(spacing: 12) {
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(alarm.timeLabel)
-                        .font(.title2)
-                        .foregroundStyle(alarm.isEnabled ? .primary : .secondary)
-                    Text(alarm.title)
-                        .font(.subheadline.weight(.semibold))
-                    Text(alarm.repeatRule.label)
-                        .font(.footnote)
-                        .foregroundStyle(.secondary)
-                    if let nextReminderText {
-                        Text(nextReminderText)
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
+            VibeCard {
+                HStack(spacing: VibeSpacing.md) {
+                    // Time and Info
+                    VStack(alignment: .leading, spacing: VibeSpacing.xs) {
+                        Text(alarm.timeLabel)
+                            .font(VibeFont.title3)
+                            .foregroundStyle(alarm.isEnabled ? VibeColor.textPrimary : VibeColor.textSecondary)
+
+                        Text(alarm.title)
+                            .font(VibeFont.body.weight(.semibold))
+                            .foregroundStyle(alarm.isEnabled ? VibeColor.textPrimary : VibeColor.textSecondary)
+
+                        // Repeat rule and next reminder
+                        HStack(spacing: VibeSpacing.sm) {
+                            Text(alarm.repeatRule.label)
+                                .font(VibeFont.footnote)
+                                .foregroundStyle(VibeColor.textSecondary)
+
+                            if let nextReminderText {
+                                Text(nextReminderText)
+                                    .font(VibeFont.footnote)
+                                    .foregroundStyle(VibeColor.accent)
+                            }
+                        }
+
+                        // Challenge indicator
+                        if let challenge = alarm.challenge {
+                            VibeBadge(challenge.title)
+                        }
                     }
+
+                    Spacer()
+
+                    // Toggle
+                    Toggle("", isOn: Binding(get: {
+                        alarm.isEnabled
+                    }, set: { newValue in
+                        onToggle(newValue)
+                    }))
+                    .labelsHidden()
+                    .tint(VibeColor.accent)
                 }
-
-                Spacer()
-
-                Toggle("", isOn: Binding(get: {
-                    alarm.isEnabled
-                }, set: { newValue in
-                    onToggle(newValue)
-                }))
-                .labelsHidden()
             }
         }
         .buttonStyle(.plain)
@@ -205,4 +268,14 @@ private struct AlarmRow: View {
         formatter.timeStyle = .short
         return formatter
     }()
+}
+
+// MARK: - Preview
+
+#Preview {
+    let viewModel = AlarmListViewModel()
+    return NavigationStack {
+        AlarmListView(viewModel: viewModel)
+            .background(VibeColor.background)
+    }
 }
